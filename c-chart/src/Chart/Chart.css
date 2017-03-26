@@ -1,0 +1,127 @@
+.chart-container {
+  position: relative;
+  margin: 80px 20px;
+}
+
+.legend line {
+  stroke: #e5e7e9;
+  stroke-width: 1;
+}
+
+.year,
+.legend .horizontal-text,
+.legend .vertical-text {
+  fill: #989fa7;
+  font-size: 12px;
+}
+
+.year {
+  font-size: 13px;
+}
+
+.legend .horizontal-text {
+  text-anchor: middle;
+}
+
+.legend .vertical-text {
+  text-anchor: end;
+}
+
+.data {
+  stroke-width: 1.5;
+  stroke: #74a3c7;
+}
+
+.hint .line {
+  stroke-width: 1px;
+  stroke: #d5d8d9;
+  stroke-dasharray: 4,4;
+}
+
+.hint .dot,
+.hint .hidden {
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+.hint .dot {
+  stroke: #f6f7f8;
+  fill: #74a3c7;
+}
+
+.hint .hidden {
+  stroke: transparent;
+  fill: transparent;
+}
+
+.tooltip {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: white;
+  text-align: left;
+  font-size: 13px;
+  padding: 10px;
+  line-height: 0.8em;
+  white-space: nowrap;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0 3px 8px, rgba(0, 0, 0, 0.1) 0 3px 8px;
+  border-radius: 3px;
+  animation: fade-in 0.2s linear 1, move-in 0.2s linear 1;
+}
+
+.tooltip .date {
+  color: #989fa7;
+  padding-bottom: 6px;
+}
+
+.tooltip .sign,
+.tooltip .value {
+  color: #3e4757;
+}
+
+.tooltip .sign {
+  padding: 0 3px;
+}
+
+.tooltip .up {
+  color: #22a053;
+}
+
+.tooltip .down {
+  color: #a0222e;
+}
+
+.tooltip .zero {
+  margin-left: 10px;
+}
+
+.tooltip .up:before,
+.tooltip .down:before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0 2px 0 10px;
+
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+
+}
+
+.tooltip .up:before {
+  border-bottom: 6px solid;
+}
+
+.tooltip .down:before {
+  border-top: 6px solid;
+}
+
+@keyframes fade-in {
+  from   { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
+@keyframes move-in {
+  from   { margin-top: -5px; }
+  to { margin-top: 0; }
+}
