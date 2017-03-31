@@ -1,0 +1,120 @@
+<my-slider></my-slider>
+
+<h3>Станьте партнером крупнейшего производителя кожгалантереи на Российском рынке</h3>
+
+<ul class='highlights'>
+  <li class='column'>
+    <h4>Качество</h4>
+    <div>Мы гарантируем качество и узнаваемость бренда. Все продукты проходят тщательный
+      контроль.</div>
+  </li>
+  <li class='column'>
+    <h4>Условия</h4>
+    <div>Мы предоставляем прозрачные уловия сотрудничества. Каждый клиент остается доволен.</div>
+  </li>
+  <li class='column'>
+    <h4>Доставка</h4>
+    <div>Мы осуществляем бесплатную доставку по Москве и области. Всегда точно в срок.</div>
+  </li>
+  <li class='column'>
+    <h4>Консультации</h4>
+    <div>Мы проводим бесплатные консультации по любым вопросам сотрудничества.</div>
+  </li>
+  <button class='callback'>Заказать звонок</button>
+</ul>
+<section class='goods'>
+  <aside class='catalog'>
+    <div class='search'>
+      <input type="text" placeholder='ПОИСК'>
+    </div>
+
+    <h2>Каталог</h2>
+    <h5>Женская коллекция</h5>
+    <nav class='list'>
+      <a>Сумки (125)</a>
+      <a>Перчатки (108)</a>
+      <a>Шарфы (541)</a>
+      <a>Платки (362)</a>
+      <a>Головные уборы (237)</a>
+      <a>Аксессуары (912)</a>
+
+      <nav class='sublist'>
+        <a>Кошельки (123)</a>
+        <a>Портмоне (60)</a>
+        <a>Косметички (75)</a>
+        <a>Обложки для</a>
+        <a>документов (32)</a>
+        <a>Визитницы (100)</a>
+        <a>Ремни (89)</a>
+        <a>Ключницы (120)</a>
+      </nav>
+    </nav>
+
+    <h5>Мужская коллекция</h5>
+    <ul class='list'>
+      <li><a>Шарфы (140)</a></li>
+      <li><a>Сумки (212)</a></li>
+      <li><a>Перчатки (808)</a></li>
+    </ul>
+  </aside>
+  <div class='items'>
+    <h1>Топ продаж</h1>
+    <nav>
+      <a href="#" class='active'>Топ продаж (125)</a>
+      <a href="#">Новинки (125)</a>
+      <a href="#">Акции (125)</a>
+    </nav>
+    <div>
+      <div class='items-list'>
+        <div *ngFor='let item of items | paginate: { itemsPerPage: 8, currentPage: p }'
+             class='item-wrap'>
+          <div class='item'>
+            <img src={{item.preview}} alt="">
+            <div class='details'>
+              <a>{{item.name}}</a>
+              <div>
+                <span class='price'>{{item.price}}</span>
+                <span class='currency'>₽</span>
+              </div>
+            </div>
+            <div class='actions'>
+              <button class='buy'>Купить</button>
+              <a class='add-to-cart' (click)='addToCart(item)'>В корзину</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <pagination-controls
+        (pageChange)="p = $event"
+        class='custom-pagination'
+        previousLabel=""
+        nextLabel=""
+      ></pagination-controls>
+    </div>
+  </div>
+</section>
+<section class='info'>
+  <aside class='news'>
+    <h2>Новости</h2>
+    <div class='news-articles'>
+      <article *ngFor='let article of newsArticles'>
+        <a href="">{{article.caption}}</a>
+        <div class='date'>{{article.date | date:'mediumDate'}}</div>
+        <div class='content'>{{article.content}}</div>
+      </article>
+    </div>
+  </aside>
+  <div class='brief'>
+    <h2>Интернет-магазин элитной кожгалантереи</h2>
+    <div class='content'>
+      <p>Компания Leo Ventoni присутствует на Российском рынке более 15 лет, с 1996 года. Основным направлением деятельности Leo Ventoni является оптовая торговля, где позиция одноc-pagination- надежно удерживается компанией много лет.</p>
+      <p>Среди <a href="">брендов</a> представляемых нами на российском рынке, следует выделить 4 бренда, официальными представителями которых компания является:</p>
+      <ul>
+        <li>Leo Ventoni</li>
+        <li>Fabretti</li>
+        <li>Palio</li>
+        <li>Galaday</li>
+      </ul>
+    </div>
+  </div>
+</section>

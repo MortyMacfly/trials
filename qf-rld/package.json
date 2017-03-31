@@ -1,0 +1,75 @@
+{
+  "name": "quantify-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "modulePaths": [
+      "<rootDir>/app"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "material-ui": "^0.16.6",
+    "moment": "^2.17.1",
+    "normalize.css": "^5.0.0",
+    "react": "^15.0.0",
+    "react-custom-scrollbars": "^4.0.0",
+    "react-document-events": "^1.2.1",
+    "react-dom": "^15.0.0",
+    "react-overlays": "^0.6.10",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.6",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0",
+    "wolfy87-eventemitter": "^5.1.0"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.5.0",
+    "autoprefixer": "^6.5.1",
+    "babel-core": "^6.3.17",
+    "babel-jest": "^18.0.0",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-1": "^6.16.0",
+    "browser-sync": "^2.17.5",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.25.0",
+    "deep-freeze": "0.0.1",
+    "del": "^2.2.2",
+    "ejs": "^2.5.2",
+    "enzyme": "^2.7.0",
+    "expose-loader": "^0.7.1",
+    "file-loader": "^0.9.0",
+    "http-proxy-middleware": "^0.17.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^18.1.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.3.0",
+    "postcss": "^5.2.5",
+    "postcss-loader": "^1.0.0",
+    "react-addons-test-utils": "^15.4.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "redux-logger": "^2.7.0",
+    "redux-mock-store": "^1.2.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.0"
+  }
+}

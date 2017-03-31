@@ -1,0 +1,103 @@
+<header>
+
+
+
+  <div class='top'>
+    <div class='contacts'>
+      <div class='contact'>
+        <div>Отптовый склад в Москве</div>
+        <a href="tel:+74991234567">+7 (499) 123 45 67</a>
+      </div>
+      <div class='contact'>
+        <div>Отдел сбыта в Москве</div>
+        <a href="tel:+74991234567">+7 (499) 123 45 67</a>
+      </div>
+    </div>
+    <div class='cart'>
+      <popover-content #myPopover
+                       title="Корзина"
+                       [closeOnClickOutside]="true" >
+        <ul>
+          <li *ngFor='let item of cartItems'>{{item.name}}</li>
+        </ul>
+      </popover-content>
+
+      <a [popover]="myPopover">Корзина:</a> вы еще ничего не заказали
+    </div>
+    <div class='log-in'>
+      <a href="">Войти</a>
+    </div>
+  </div>
+  <div class='brand'></div>
+  <div class='nav-wrap'>
+    <nav>
+      <a [routerLink]="['']">Компания</a>
+      <a [routerLink]="['about']">Магазин</a>
+      <a>Бренды</a>
+      <a>Сотрудничество</a>
+      <a>Новости</a>
+      <a>Контакты</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <!--<h1>Hello from {{api.title}}!</h1>-->
+
+  <!-- Images (and assets) are parsed and loaded from within the public directory -->
+  <!--<img src="/img/angular.png">-->
+  <router-outlet></router-outlet>
+</main>
+<footer>
+  <div class='line'></div>
+  <div class='line'></div>
+
+  <div class='wrap'>
+    <aside class='badge-wrap'>
+      <div class='brand-badge'>
+        <img src="/img/footer/logo.png" alt="">
+        <div>Крупнейший производитель и продавец кожгалантереи и аксессуаров в России.</div>
+      </div>
+    </aside>
+
+    <div class='sitemap'>
+      <div>
+        <h4>Товары</h4>
+        <nav>
+          <a href="#">Сумки</a>
+          <a href="#">Перчатки</a>
+          <a href="#">Шарфы</a>
+          <a href="#">Платки</a>
+          <a href="#">Головные уборы</a>
+          <a href="#">Аксессуары</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Бренды</h4>
+        <nav>
+          <a href="#">Leo Ventoni</a>
+          <a href="#">Palio</a>
+          <a href="#">Galady</a>
+          <a href="#">Fabretti</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Сотрудничество</h4>
+        <nav>
+          <a href="#">Компания</a>
+          <a href="#">О проекте</a>
+          <a href="#">Условия</a>
+          <a href="#">Оплата</a>
+          <a href="#">Доставка</a>
+          <a href="#">Контакты</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class='copyright-wrap'>
+    <div class='copyright'>
+      <a href="#">Оратная связь</a>
+      © 2012–2013, Компания Leo Ventoni
+    </div>
+  </div>
+  <!--<a [href]="url">Webpack Angular 2 Starter</a>-->
+</footer>

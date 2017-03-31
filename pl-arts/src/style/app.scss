@@ -1,0 +1,88 @@
+// styles in src/style directory are applied to the whole page
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  color: #1f2a39;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+a {
+  color: #577bc0;
+}
+
+
+h1 {
+  color: #1f2a39;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h4 {
+  color: #1e3664;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h5 {
+  color: #384251;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 36px;
+  margin: 0;
+}
+
+
+
+.custom-pagination {
+  .ng2-pagination a, .ng2-pagination button {
+    color: #577bc0;
+  }
+
+  .ng2-pagination .current {
+    background: white;
+    border: 2px solid currentColor;
+    color: #577bc0;
+  }
+
+  .ng2-pagination .current {
+    padding: 0.1875rem calc(0.625rem - 2px);
+  }
+
+  .ng2-pagination .pagination-previous a::before,
+  .ng2-pagination .pagination-previous.disabled::before {
+    content: '';
+    width: 8px;
+    height: 12px;
+    background: url(/img/pagination/prev.png);
+  }
+
+  .ng2-pagination .pagination-next a::after,
+  .ng2-pagination .pagination-next.disabled::after {
+    content: '';
+    width: 8px;
+    height: 12px;
+    background: url(/img/pagination/next.png);
+  }
+
+  .ng2-pagination {
+    margin-left: 150px;
+  }
+}

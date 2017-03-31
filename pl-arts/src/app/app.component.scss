@@ -1,0 +1,215 @@
+// styles applied on :host are applied on the current component, "app" in this case
+:host {
+  display: block;
+}
+
+header {
+  background-color: #fff;
+  //padding: 16px;
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  //width: 100%;
+  box-shadow: 0 1px 8px 0 rgba(22, 39, 85, 0.25);
+}
+
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 950px;
+  margin: 0 auto;
+
+  & > *:before {
+    content: '';
+    display: block;
+    position: relative;
+  }
+}
+
+.contacts {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+
+  & > * + * {
+    margin-left: 45px;
+  }
+  &:before {
+    width: 18px;
+    height: 26px;
+    background: url(/img/header/phone.png);
+    content: '';
+    top: 4px;
+    right: 15px;
+  }
+
+  .contact > a {
+    display: block;
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+  }
+}
+
+.cart {
+  font-size: 16px;
+  font-weight: 400;
+  align-self: center;
+  margin-top: 5px;
+
+  &:before {
+    width: 32px;
+    height: 26px;
+    background: url(/img/header/cart.png);
+    top: -5px;
+    right: 15px;
+    float: left;
+  }
+}
+
+.log-in {
+  align-self: center;
+  margin-top: 5px;
+
+  & > a {
+    color: #1f2a39;
+    font-size: 16px;
+  }
+
+  &:before {
+    width: 31px;
+    height: 29px;
+    background: url(/img/header/profile.png);
+    top: -5px;
+    right: 15px;
+    float: left;
+  }
+}
+
+.brand {
+  background: #162755 url(/img/header/logo.png) center  no-repeat;
+  height: 80px;
+
+}
+
+.nav-wrap {
+  background: #f1f3f8;
+  padding: 1.1rem 0;
+
+  nav {
+    font-size: 0;
+    width: 980px;
+    margin: 0 auto;
+
+    & > * {
+      text-decoration: none;
+      font-size: 18px;
+      text-shadow: 1px 2px 1px #ffffff;
+      text-transform: uppercase;
+    }
+
+    & > * + *:before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background: url(/img/header/dot.png);
+      vertical-align: middle;
+      margin: 0 0.5em;
+
+    }
+  }
+}
+
+
+main {
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 50px 0;
+  display: block;
+}
+
+footer {
+  text-align: left;
+  background: #f1f3f8;
+  border-top: 2px solid #e0e3e9;
+
+  .line {
+    margin-top: 4px;
+    border-top: 2px solid #e0e3e9;
+    border-bottom: 2px solid #e0e3e9;
+    height: 8px;
+  }
+  .wrap {
+    width: 1000px;
+    margin: 40px auto 0;
+  }
+
+  h4 {
+    color: #1f2a39;
+  }
+
+  .sitemap {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #384251;
+      font-size: 16px;
+      line-height: 26px;
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+
+  .badge-wrap {
+    float: right;
+    border: 4px solid #96a0b7;
+  }
+
+  .brand-badge {
+    width: 400px;
+    border: 4px solid #c3c9d7;
+    padding: 30px;
+
+    color: #384251;
+    font-size: 20px;
+    line-height: 30px;
+
+    & > * + * {
+      margin-top: 30px;
+    }
+  }
+
+  .copyright-wrap {
+    background: #96a0b7;
+    clear: both;
+    border-top: 4px solid #c3c9d7;
+    padding: 10px 0;
+    margin-top: 80px;
+
+    .copyright {
+      width: 1000px;
+      margin: 0 auto;
+      color: #384251;
+
+      a {
+        float: right;
+      }
+
+    }
+  }
+}
+
+
